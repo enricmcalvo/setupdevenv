@@ -44,7 +44,7 @@ if [ -d .emacs.d/ ]; then
     mv .emacs.d ~/.old/.emacs.d.$IDUNIQOLD
 fi
 
-git clone https://github.com/startup-class/dotfiles.git
+git clone https://github.com/enricmcalvo/dotfiles-supeng.git
 ln -sb dotfiles/.screenrc .
 ln -sb dotfiles/.bash_profile .
 ln -sb dotfiles/.bashrc .
