@@ -2,6 +2,10 @@
 # Simple setup.sh for configuring Ubuntu 12.04 LTS EC2 instance
 # for headless setup. 
 
+# Install Heroku
+source $(dirname $0)/setupheroku/install-ubuntu.sh
+
+#Install node.js and minimal necessary dev env 
 sudo apt-get install python-software-properties python g++ make
 sudo add-apt-repository ppa:chris-lea/node.js
 sudo apt-get update
