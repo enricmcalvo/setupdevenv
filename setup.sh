@@ -2,7 +2,6 @@
 # Simple setup.sh for configuring Ubuntu 12.04 LTS EC2 instance
 # for headless setup. 
 
-
 sudo apt-get install python-software-properties python g++ make
 sudo add-apt-repository ppa:chris-lea/node.js
 sudo apt-get update
@@ -34,12 +33,17 @@ sudo apt-get install -y emacs24 emacs24-el emacs24-common-non-dfsg
 
 # git pull and install dotfiles as well
 cd $HOME
+# create unique id based on sha1sum and current date. cut strips '-' from sha1sum output
+IDUNIQOLD=`date | sha1sum | cut -f 1 -d ' '`
+
+mkdir -p ~/.old
 if [ -d ./dotfiles/ ]; then
-    mv dotfiles dotfiles.old
+    mv dotfiles ~/.old/dotfiles.$IDUNIQOLD
 fi
 if [ -d .emacs.d/ ]; then
-    mv .emacs.d .emacs.d~
+    mv .emacs.d ~/.old/.emacs.d.$IDUNIQOLD
 fi
+
 git clone https://github.com/startup-class/dotfiles.git
 ln -sb dotfiles/.screenrc .
 ln -sb dotfiles/.bash_profile .
