@@ -4,6 +4,11 @@
 
 # Install Heroku
 source $(dirname $0)/setupheroku/install-ubuntu.sh
+# please execute
+# heroku login
+# ssh-keygen -t rsa
+# heroku keys:add
+# git clone https://github.com/heroku/node-js-sample.git
 
 #Install node.js and minimal necessary dev env 
 sudo apt-get install python-software-properties python g++ make
