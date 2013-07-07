@@ -20,6 +20,8 @@ nvm use v0.10.12
 # Install jshint to allow checking of JS code within emacs
 # http://jshint.com/
 npm install -g jshint
+# Install useful node packages like restler, csv, accouting
+npm install restler csv accounting
 
 # Install rlwrap to provide libreadline features with node
 # See: http://nodejs.org/api/repl.html#repl_repl
