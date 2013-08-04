@@ -48,17 +48,17 @@ cd $HOME
 IDUNIQOLD=`date | sha1sum | cut -f 1 -d ' '`
 
 mkdir -p ~/.old
-if [ -d ./dotfiles/ ]; then
-    mv dotfiles ~/.old/dotfiles.$IDUNIQOLD
+if [ -d ./.dotfiles/ ]; then
+    mv .dotfiles ~/.old/.dotfiles.$IDUNIQOLD
 fi
 if [ -d .emacs.d/ ]; then
     mv .emacs.d ~/.old/.emacs.d.$IDUNIQOLD
 fi
 
-git clone https://github.com/enricmcalvo/dotfiles-supeng.git dotfiles
-ln -sb dotfiles/.screenrc .
-ln -sb dotfiles/.bash_profile .
-ln -sb dotfiles/.bashrc .
-ln -sb dotfiles/.bashrc_custom .
-ln -sf dotfiles/.emacs.d .
+git clone https://github.com/enricmcalvo/dotfiles-supeng.git .dotfiles
+ln -sb .dotfiles/.screenrc .
+ln -sb .dotfiles/.bash_profile .
+ln -sb .dotfiles/.bashrc .
+ln -sb .dotfiles/.bashrc_custom .
+ln -sf .dotfiles/.emacs.d .
 
