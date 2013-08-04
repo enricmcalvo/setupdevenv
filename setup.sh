@@ -3,7 +3,7 @@
 # for headless setup. 
 
 # Install Heroku
-source $(dirname $0)/setupheroku/install-ubuntu.sh
+source $(dirname $0)/heroku/setup-heroku.sh
 # please execute
 # heroku login
 # ssh-keygen -t rsa
